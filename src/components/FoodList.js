@@ -1,11 +1,11 @@
 import FoodItem from "./FoodItem";
 
-const FoodList  =({dishes})=>{
+const FoodList  =({data, handleClick})=>{
     return(
         
             <div className="food-list">
             <p className="title">Restaurant For All</p>
-          {dishes.map(dish=> <FoodItem {...dish}key={dish.itemName}/>)}
+          {data.map(dish=> <FoodItem {...dish}key={dish.itemName} handleOnClick={handleClick}/>)}
         
         </div>
     )

@@ -1,4 +1,4 @@
-const FoodItem=({foodImage,description,itemName,featured,price})=>{
+const FoodItem=({foodImage,description,itemName,featured,price, handleOnClick})=>{
     return(
         <div className="container">
             <div>
@@ -13,6 +13,7 @@ const FoodItem=({foodImage,description,itemName,featured,price})=>{
             <div className="price">
             <p className="star">{featured?'*':null}</p>
             <p>{price}</p>
+            <button onClick={()=>handleOnClick(description)}>Dish Discription</button>
             </div>
             </div>
             </div>
